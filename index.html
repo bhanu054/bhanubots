@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bhanu Bots</title>
+<title>Coin Flip</title>
+
 <style>
 body{
 font-family: Arial;
@@ -11,21 +12,51 @@ color:white;
 margin-top:100px;
 }
 
-h1{
-font-size:50px;
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+background:#22c55e;
+color:white;
 }
 
-p{
-font-size:20px;
+button:hover{
+background:#16a34a;
+}
+
+#result{
+font-size:40px;
+margin-top:30px;
 }
 </style>
+
 </head>
 
 <body>
 
-<h1>Welcome to Bhanu Bots</h1>
-<p>This website is hosted using GitHub Pages 🚀</p>
+<h1>🪙 Coin Flip</h1>
+
+<button onclick="flipCoin()">Flip Coin</button>
+
+<div id="result">?</div>
+
+<script>
+
+function flipCoin(){
+
+let random = Math.random();
+
+if(random < 0.5){
+document.getElementById("result").innerHTML = "Heads";
+}else{
+document.getElementById("result").innerHTML = "Tails";
+}
+
+}
+
+</script>
 
 </body>
-
 </html>
